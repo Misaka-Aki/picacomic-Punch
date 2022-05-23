@@ -1,16 +1,14 @@
 name: picacgPunch
 
 on:
-
+  repository_dispatch:
+  workflow_dispatch:
   push:
     branches: [ main ]    
     paths:
     - '**'
     - '!.gitignore'
     - '!README.md'
-  
-    
-    
   schedule:
     - cron: '2 2 * * *'
 
